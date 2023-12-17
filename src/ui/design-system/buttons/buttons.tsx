@@ -13,6 +13,7 @@ interface Props {
 }
 
 export const Buttons = ({
+  // Par default
   size = "medium",
   variant = "accent",
   icon,

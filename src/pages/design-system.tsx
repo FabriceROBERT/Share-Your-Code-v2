@@ -5,7 +5,7 @@ import { Avatar } from "@/ui/design-system/avatar/avatar";
 import { Buttons } from "@/ui/design-system/buttons/buttons";
 import { Logo } from "@/ui/design-system/logo/logo";
 import { Spinner } from "@/ui/design-system/spinner/spinner";
-import Typographie from "@/ui/design-system/typographie/typographie";
+import Typography from "@/ui/design-system/typographie/typography";
 import { RiUser6Line } from "react-icons/ri";
 
 export default function DesignSystem() {
@@ -58,9 +58,9 @@ export default function DesignSystem() {
             Appuie
           </Buttons>
           <Buttons variant="disabled">Appuie</Buttons>
-          <Typographie variant="display" weight="regular" component="div">
+          <Typography variant="display" weight="regular" component="div">
             hello world
-          </Typographie>
+          </Typography>
         </div>
       </Container>
     </div>

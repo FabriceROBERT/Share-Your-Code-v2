@@ -5,7 +5,7 @@ import { Avatar } from "@/ui/design-system/avatar/avatar";
 import { Buttons } from "@/ui/design-system/buttons/buttons";
 import { Logo } from "@/ui/design-system/logo/logo";
 import { Spinner } from "@/ui/design-system/spinner/spinner";
-import Typographie from "@/ui/design-system/typographie/typographie";
+import Typography from "@/ui/design-system/typographie/typography";
 import { RiAncientGateFill, RiUser6Line } from "react-icons/ri";
 import DesignSystem from "./design-system";
 import Footer from "@/ui/components/navigation/footer";

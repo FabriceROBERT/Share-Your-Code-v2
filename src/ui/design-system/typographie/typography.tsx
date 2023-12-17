@@ -25,7 +25,7 @@ interface Props {
 import clsx from "clsx";
 import React from "react";
 
-function Typographie({
+function Typography({
   variant = "h3",
   theme = "black",
   weight = "regular",
@@ -114,4 +114,4 @@ function Typographie({
   );
 }
 
-export default Typographie;
+export default Typography;

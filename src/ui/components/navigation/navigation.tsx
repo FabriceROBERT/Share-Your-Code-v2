@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../container/container";
 import { Logo } from "@/ui/design-system/logo/logo";
-import Typographie from "@/ui/design-system/typographie/typographie";
+import Typographie from "@/ui/design-system/typographie/typography";
 import { Buttons } from "@/ui/design-system/buttons/buttons";
 import Link from "next/link";
 import ActiveLink from "./active-link";
