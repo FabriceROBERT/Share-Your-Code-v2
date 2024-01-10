@@ -2,15 +2,20 @@ import React from "react";
 import Container from "../container/container";
 import Typography from "@/ui/design-system/typographie/typography";
 import Image from "next/image";
-import { FooterAppLinks } from "./app-links";
+import { footerAppLinks, footerLinks, footerUsersLinks } from "./app-links";
 import {v4 as uuidv4} from "uuid";
 import ActiveLink from "./active-link";
 import { Link } from "react-router-dom";
+import { AppLinks, FooterLinks } from "@/types/app-links";
+import {FooterLink} from "./footer-links"
 
 function Footer() {
   // Afficher la date de l'année en cours
   const currentYear = new Date().getFullYear();
 
+  const footerNavigationList = footerLinks.map((columnLinks) => (
+    <FooterLink key={uuidv4()} data={columnLinks}/>
+  ))
     
     
   return (
@@ -24,30 +29,11 @@ function Footer() {
             Rejoins la chaîne
           </Typography>
 
-          {/* <div className="flex flex-row gap-5 justify-center align-baseline">
-            <a href="https://github.com/FabriceROBERT" target="_blacnk">
-              <Image
-                src="/assets/svg/github.svg"
-                //width : 229 , height : 216
-                width={100}
-                height={100}
-                alt="Github link"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/fabrice-robert9536/"
-              target="_blacnk"
-            >
-              <Image
-                src="/assets/svg/linkedin.svg"
-                width={150}
-                height={150}
-                alt="Linkedin link"
-              />
-            </a>
-          </div> */}
+         
         </div>
-        <div className=""><FooterLink/> </div>
+        <div className=" flex gap-7">
+         {footerNavigationList} 
+          </div>
       </Container>
       <Container className="pt-9 pb-11 space-y-11">
         <hr className="text-gray-800" />
@@ -64,7 +50,7 @@ function Footer() {
             {` - Share Your
             Code`}
           </Typography>
-          <div className="">2</div>
+          <div className="text-white">2</div>
         </div>
       </Container>
     </div>
@@ -72,24 +58,4 @@ function Footer() {
 }
 
 export default Footer;
-
-const FooterLink = () => {
-  const linksList = FooterAppLinks.map((link) => (
-    <div key={uuidv4()}> 
-    {link.type === "internal" && ( <ActiveLink href={link.baseUrl}>{link.label}</ActiveLink>)
-  }
-      {link.type ==="external" && (
-     
-    <a href={link.baseUrl} target="_blank">{link.label}</a>)}</div>))
   
-  return (
-    <div className="min-w-[190px]">
-      <Typography variant="caption2" className="pb-5" theme="white" weight="medium">
-        Titre
-      </Typography>
-      <Typography variant="caption3" className="space-y-4" theme="gray">
-   {linksList}
-      </Typography>
-     
-    </div>
-  )}

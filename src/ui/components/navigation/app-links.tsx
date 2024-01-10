@@ -1,21 +1,23 @@
 import { AppLinks } from "@/types/app-links";
+import { networkInterfaces } from "os";
 
-export const FooterAppLinks: AppLinks[] = [
+export const footerAppLinks: AppLinks[] = [
+  
   // AppLinks
   { 
     label: "Accueil",
     baseUrl: "/",
     type: "internal",
   },
-  // AppLinks
 
+  // AppLinks
   {
     label: "Projets",
     baseUrl: "/#",
     type: "internal",
   },
-  // AppLinks
 
+  // AppLinks
   {
     label: "Share Your Code",
     baseUrl: "/#",
@@ -23,7 +25,7 @@ export const FooterAppLinks: AppLinks[] = [
   },
 ];
 
-const footerUsersLinks: AppLinks[] = [
+export const footerUsersLinks: AppLinks[] = [
   {
     label: "Mon espace",
     baseUrl: "/#",
@@ -69,7 +71,7 @@ const footerInformationLinks: AppLinks[] = [
   },
 ];
 
-const footerSocialNetworksLinks = [
+const footerSocialNetworksLinks: AppLinks[] = [
   {
     label: "Linkedin",
     baseUrl: "https://www.linkedin.com/in/fabrice-robert9536/",
@@ -86,3 +88,29 @@ const footerSocialNetworksLinks = [
     type: "external",
   },
 ];
+
+export const footerLinks = [
+  {
+    label: "App",
+    links: footerAppLinks,
+  
+  },
+
+  {
+    label: "Utilisateurs",
+    links: footerUsersLinks,
+  
+  },
+  {
+    label: "Informations",
+    links: footerInformationLinks,
+  
+  },
+  {
+    label: "Réseaux",
+    links: footerSocialNetworksLinks,
+  
+  }
+  
+
+]
