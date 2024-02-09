@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Buttons } from "./buttons";
 import { RiFacebookBoxFill } from "react-icons/ri";
 import clsx from "clsx";
+import { LinkTypes } from "@/lib/link-type";
 
 interface Props {
   theme?: "gray" | "accent" | "secondary";
@@ -21,6 +22,8 @@ export const SocialNetworksButtons = ({
       }}
       iconTheme={theme}
       variant="ico"
+      baseUrl={socialNetwork.baseUrl}
+      linkType={socialNetwork.type}
     />
   ));
 

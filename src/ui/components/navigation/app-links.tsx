@@ -1,12 +1,11 @@
-import { AppLinks } from "@/types/app-links";
+import { AppLinks, FooterLinks } from "@/types/app-links";
 import {
   RiGithubFill,
   RiLinkedinFill,
   RiPlanetFill,
   RiTwitterFill,
-  RiYoutubeFill,
 } from "react-icons/ri";
-
+// Prends en compte la liste des propriété de AppLinks dans @/types/app-links
 export const footerAppLinks: AppLinks[] = [
   // AppLinks
   {
@@ -103,7 +102,7 @@ export const footerSocialNetworksLinks: AppLinks[] = [
   },
 ];
 
-export const footerLinks = [
+export const footerLinks: FooterLinks[] = [
   {
     label: "App",
     links: footerAppLinks,
