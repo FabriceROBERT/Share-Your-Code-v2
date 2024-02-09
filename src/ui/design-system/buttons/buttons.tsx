@@ -52,7 +52,7 @@ export const Buttons = ({
           "bg-primary hover:bg-primary-300/80 text-white rounded-full";
       }
       if (iconTheme === "gray") {
-        variantStyle = "bg-gray-700 hover:bg-gray-600 text-white rounded-full";
+        variantStyle = "bg-gray-800 hover:bg-gray-700 text-white rounded-full";
       }
 
       break;
@@ -99,7 +99,6 @@ export const Buttons = ({
           isLoading && "cursor-wait",
           "relative animate"
         )}
-        // onClick={() => console.log("clique")}
         disabled={disabled}
       >
         {isLoading && (

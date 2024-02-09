@@ -1,10 +1,15 @@
 import { AppLinks } from "@/types/app-links";
-import { networkInterfaces } from "os";
+import {
+  RiGithubFill,
+  RiLinkedinFill,
+  RiPlanetFill,
+  RiTwitterFill,
+  RiYoutubeFill,
+} from "react-icons/ri";
 
 export const footerAppLinks: AppLinks[] = [
-  
   // AppLinks
-  { 
+  {
     label: "Accueil",
     baseUrl: "/",
     type: "internal",
@@ -71,21 +76,30 @@ const footerInformationLinks: AppLinks[] = [
   },
 ];
 
-const footerSocialNetworksLinks: AppLinks[] = [
+export const footerSocialNetworksLinks: AppLinks[] = [
   {
     label: "Linkedin",
     baseUrl: "https://www.linkedin.com/in/fabrice-robert9536/",
     type: "external",
+    icon: RiLinkedinFill,
   },
   {
     label: "Github",
     baseUrl: "https://github.com/FabriceROBERT",
     type: "external",
+    icon: RiGithubFill,
   },
   {
     label: "Twitter (X)",
     baseUrl: "https://twitter.com/fabriciooo_fr",
     type: "external",
+    icon: RiTwitterFill,
+  },
+  {
+    label: "Portfolio",
+    baseUrl: "https://portfolio-v3-fabricerobert.vercel.app/",
+    type: "external",
+    icon: RiPlanetFill,
   },
 ];
 
@@ -93,24 +107,18 @@ export const footerLinks = [
   {
     label: "App",
     links: footerAppLinks,
-  
   },
 
   {
     label: "Utilisateurs",
     links: footerUsersLinks,
-  
   },
   {
     label: "Informations",
     links: footerInformationLinks,
-  
   },
   {
     label: "Réseaux",
     links: footerSocialNetworksLinks,
-  
-  }
-  
-
-]
+  },
+];

@@ -1,23 +1,19 @@
 import React from "react";
 import Container from "../container/container";
 import Typography from "@/ui/design-system/typographie/typography";
-import Image from "next/image";
-import { footerAppLinks, footerLinks, footerUsersLinks } from "./app-links";
-import {v4 as uuidv4} from "uuid";
-import ActiveLink from "./active-link";
-import { Link } from "react-router-dom";
-import { AppLinks, FooterLinks } from "@/types/app-links";
-import {FooterLink} from "./footer-links"
+import { footerLinks } from "./app-links";
+import { v4 as uuidv4 } from "uuid";
+import { FooterLink } from "./footer-links";
+import { SocialNetworksButtons } from "@/ui/design-system/buttons/social-network-buttons";
 
 function Footer() {
   // Afficher la date de l'année en cours
   const currentYear = new Date().getFullYear();
 
   const footerNavigationList = footerLinks.map((columnLinks) => (
-    <FooterLink key={uuidv4()} data={columnLinks}/>
-  ))
-    
-    
+    <FooterLink key={uuidv4()} data={columnLinks} />
+  ));
+
   return (
     <div className="  bg-gray">
       <Container className="flex justify-between pt-16">
@@ -28,12 +24,8 @@ function Footer() {
           <Typography variant="caption3" theme="gray">
             Rejoins la chaîne
           </Typography>
-
-         
         </div>
-        <div className=" flex gap-7">
-         {footerNavigationList} 
-          </div>
+        <div className=" flex gap-7">{footerNavigationList}</div>
       </Container>
       <Container className="pt-9 pb-11 space-y-11">
         <hr className="text-gray-800" />
@@ -50,7 +42,10 @@ function Footer() {
             {` - Share Your
             Code`}
           </Typography>
-          <div className="text-white">2</div>
+          {/* Social network Button */}
+          <div className="text-white">
+            <SocialNetworksButtons theme="gray" />
+          </div>
         </div>
       </Container>
     </div>
@@ -58,4 +53,3 @@ function Footer() {
 }
 
 export default Footer;
-  
