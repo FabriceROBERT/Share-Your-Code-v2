@@ -9,13 +9,18 @@ import Typography from "@/ui/design-system/typographie/typography";
 import { RiAncientGateFill, RiUser6Line } from "react-icons/ri";
 import DesignSystem from "./design-system";
 import Footer from "@/ui/components/navigation/footer";
+import Layout from "@/ui/layout/layout";
+import LandingPageContainer from "@/ui/modules/landig-page/landing-page.container";
 
 export default function Home() {
   return (
     <div>
       <Seo title="Share Your Codes" description="description" />
-      <Navigation />
-      <Footer />
+      <Layout>
+        <LandingPageContainer />
+      </Layout>
+      {/* <Navigation />
+      <Footer /> */}
     </div>
   );
 }

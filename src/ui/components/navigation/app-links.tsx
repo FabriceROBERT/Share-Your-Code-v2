@@ -5,7 +5,8 @@ import {
   RiPlanetFill,
   RiTwitterFill,
 } from "react-icons/ri";
-// Prends en compte la liste des propriété de AppLinks dans @/types/app-links
+
+// Cette bdd prend en compte la liste des propriété de AppLinks dans @/types/app-links
 export const footerAppLinks: AppLinks[] = [
   // AppLinks
   {
