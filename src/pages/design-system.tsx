@@ -1,5 +1,4 @@
 import Container from "@/ui/components/container/container";
-import Navigation from "@/ui/components/navigation/navigation";
 import { Seo } from "@/ui/components/seo/seo";
 import { Avatar } from "@/ui/design-system/avatar/avatar";
 import { Buttons } from "@/ui/design-system/buttons/buttons";
@@ -49,6 +48,12 @@ export default function DesignSystem() {
               size="medium"
               iconTheme="gray"
               icon={{ icon: RiUser6Line }}
+              variant="ico"
+            />
+            <Buttons
+              size="medium"
+              iconTheme="gray"
+              icon={{ icon: RiUser6Line }}
               // variant="ico"
               iconPosition="left"
             >
@@ -56,9 +61,9 @@ export default function DesignSystem() {
             </Buttons>
 
             <Buttons isLoading variant="accent">
-              Appuie
+              Chargement...
             </Buttons>
-            <Buttons variant="disabled">Appuie</Buttons>
+            <Buttons variant="disabled">Appuie pas</Buttons>
             <Typography variant="display" weight="regular" component="div">
               hello world
             </Typography>

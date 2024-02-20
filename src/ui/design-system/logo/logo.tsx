@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
   size?: "very-small" | "small" | "medium" | "large";
 }
@@ -28,7 +30,13 @@ export const Logo = ({ size = "medium" }: Props) => {
   }
   return (
     <div>
-      <svg
+      <Image
+        src="https://doodleipsum.com/700/abstract?i=3628ed72497c3380a9d8ed5b28324b4e"
+        width={50}
+        height={50}
+        alt=""
+      />
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         width={sizeLogo}
         viewBox="0 0 80.3 80.3"
@@ -45,7 +53,7 @@ export const Logo = ({ size = "medium" }: Props) => {
           fill="#55ab99"
         />
         <circle cx="40.2" cy="52.5" r="1.5" fill="#0c2c48" />
-      </svg>{" "}
+      </svg>{" "} */}
     </div>
   );
 };

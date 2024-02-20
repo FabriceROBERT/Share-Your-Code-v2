@@ -9,13 +9,13 @@ interface Props {}
 
 function Navigation({}: Props) {
   return (
-    <div className="border-b-2 border-gray-400">
+    <div className="border-b-2 border-gray-500">
       <Container className="flex items-center justify-between gap-7 py-1.5">
         <Link href="/">
           <div className=" flex items-center gap-2.5">
             <Logo size="small" />
             <div className="flex flex-col">
-              <div className="text-gray font-extrabold text-[24px]">
+              <div className="text-gray font-bold text-[24px]">
                 Share Your Code
               </div>
               <Typographie variant="caption4" theme="gray" component="span">
@@ -33,7 +33,7 @@ function Navigation({}: Props) {
             <ActiveLink href="/design-system">Design System</ActiveLink>
             <ActiveLink href="/projets">Projets</ActiveLink>
             <ActiveLink href="/formations">Formations</ActiveLink>
-            <ActiveLink href="contact/">Contact</ActiveLink>
+            <ActiveLink href="/contact">Contact</ActiveLink>
           </Typographie>
           <div className="flex items-center gap-2">
             <Buttons size="small">Connexion</Buttons>
