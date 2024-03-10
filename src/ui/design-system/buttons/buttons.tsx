@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { Spinner } from "../spinner/spinner";
 import { LinkType, LinkTypes } from "@/lib/link-type";
 import Link from "next/link";
+import React from "react";
 interface Props {
   size?: "small" | "medium" | "large";
   variant?: "accent" | "secondary" | "outline" | "disabled" | "ico";
@@ -17,8 +18,8 @@ interface Props {
   // Va jouer la fonction qui lui sera transmise
   action?: Function;
 }
-
-export const Buttons = ({
+// Autre maniere d'ecrire export const Button = ({size = "medium", variant ="accent"...}: Props)
+export const Buttons: React.FC<Props> = ({
   // Par default
   size = "medium",
   variant = "accent",
@@ -31,7 +32,7 @@ export const Buttons = ({
   baseUrl,
   linkType = "internal",
   action = () => {},
-}: Props) => {
+}) => {
   let variantStyle: string = "",
     sizeStyle: string = "",
     icoSize: number = 0;
