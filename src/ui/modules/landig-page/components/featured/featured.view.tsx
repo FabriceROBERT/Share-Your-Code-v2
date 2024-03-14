@@ -5,6 +5,9 @@ import { features } from "process";
 import { v4 as uuidv4 } from "uuid";
 import Typography from "@/ui/design-system/typographie/typography";
 import Image from "next/image";
+import { Buttons } from "@/ui/design-system/buttons/buttons";
+import { RiArrowRightLine } from "react-icons/ri";
+import { SocialNetworksButtons } from "@/ui/design-system/buttons/social-network-buttons";
 
 // Je créer l'interface des objets
 interface FeaturesListInterface {
@@ -85,7 +88,37 @@ export default function FeaturedView() {
     <div className="bg-gray-300">
       <Container className="grid grid-cols-12 gap-24 py-24">
         <div className="col-span-7 grid grid-cols-2">{featuredLists} </div>
-        <div className="  col-span-5"></div>
+        <div className="flex flex-col justify-between gap-10 col-span-5">
+          <div>
+            <Typography variant="h2" component="h2" className="mb-5">
+              L'endroit le plus cool pour devenir développeur
+            </Typography>
+          </div>
+          <div>
+            <Typography
+              variant="body-lg"
+              theme="gray"
+              component="p"
+              className="mb-8"
+            >
+              L'endroit le plus cool pour devenir développeur
+            </Typography>
+            <Buttons variant="secondary" icon={{ icon: RiArrowRightLine }}>
+              Commencer
+            </Buttons>
+          </div>
+          <div>
+            <Typography
+              variant="caption3"
+              theme="gray"
+              component="div"
+              className="mb-4"
+            >
+              Réseaux sociaux
+            </Typography>
+            <SocialNetworksButtons />
+          </div>
+        </div>
       </Container>
     </div>
   );
